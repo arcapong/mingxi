@@ -1,0 +1,41 @@
+site_name: mingxi
+site_url: https://arcapong.github.io/mingxi/
+repo_url: https://github.com/arcapong/mingxi
+repo_name: arcapong/mingxi
+
+theme:
+  name: material
+  language: ko
+  palette:
+    # 시스템 설정 따라 자동 전환 + 수동 토글
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/weather-night
+        name: 다크 모드로 전환
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: 라이트 모드로 전환
+  features:
+    - navigation.sections
+    - navigation.top
+    - toc.follow
+    - search.suggest
+    - content.code.copy
+
+nav:
+  - 홈: index.md
+  - API:
+      - RESTful API 설계 및 API 자격증명: RESTful API 설계 및 API 자격증명(Credentials).md
+  - 보안:
+      - 랜덤 시크릿(토큰) 및 인코딩: 랜덤 시크릿(토큰) 및 인코딩.md
+
+markdown_extensions:
+  - admonition
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.highlight
+  - pymdownx.superfences
