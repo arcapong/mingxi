@@ -7,6 +7,7 @@ theme:
   name: material
   language: ko
   favicon: assets/favicon.svg
+  logo: assets/logo.svg
   palette:
     # 시스템 설정 따라 자동 전환 + 수동 토글
     - media: "(prefers-color-scheme: light)"
