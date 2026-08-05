@@ -1,0 +1,14 @@
+/* 브랜드 퍼플 팔레트 */
+:root {
+  --md-primary-fg-color: #5b3fd4;
+  --md-primary-fg-color--light: #7a63e0;
+  --md-primary-fg-color--dark: #4b34ad;
+  --md-accent-fg-color: #7a63e0;
+  --md-typeset-a-color: #5b3fd4;
+}
+
+/* 다크 모드(slate)에서는 밝은 톤으로 */
+[data-md-color-scheme="slate"] {
+  --md-typeset-a-color: #a795f0;
+  --md-accent-fg-color: #a795f0;
+}

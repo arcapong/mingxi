@@ -32,6 +32,9 @@ nav:
   - 보안:
       - 랜덤 시크릿(토큰) 및 인코딩: 랜덤 시크릿(토큰) 및 인코딩.md
 
+extra_css:
+  - stylesheets/extra.css
+
 markdown_extensions:
   - admonition
   - tables
