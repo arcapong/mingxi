@@ -13,3 +13,7 @@
 ### 보안
 
 - [랜덤 시크릿(토큰) 및 인코딩](<docs/랜덤 시크릿(토큰) 및 인코딩.md>) — 용도별(JWT 서명, AES 암호화, Bearer 토큰) 시크릿 키 생성 `openssl` 명령어와 인코딩 형식 제약
+
+### 데이터베이스
+
+- [UUID (Universally Unique Identifier) 가이드](<docs/UUID (Universally Unique Identifier) 가이드.md>) — 버전별(v1~v8) 비교, RDB PK 관점의 UUIDv4 vs v7 (B-Tree 페이지 분할), 언어/DB별 UUIDv7 구현
