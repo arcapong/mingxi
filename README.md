@@ -13,6 +13,7 @@
 ### 보안
 
 - [랜덤 시크릿(토큰) 및 인코딩](<docs/랜덤 시크릿(토큰) 및 인코딩.md>) — 용도별(JWT 서명, AES 암호화, Bearer 토큰) 시크릿 키 생성 `openssl` 명령어와 인코딩 형식 제약
+- [인증(Authentication), 인가(Authorization), OAuth 2.0, OIDC](<docs/인증(Authentication), 인가(Authorization), OAuth 2.0, OIDC.md>) — 인증 vs 인가(401/403), OAuth 2.0 역할·Grant·토큰, OIDC ID Token, 구글·카카오·네이버 간편로그인이 쓰는 스택 매핑
 
 ### 데이터베이스
 

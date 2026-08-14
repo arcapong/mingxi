@@ -37,6 +37,7 @@ nav:
       - RESTful API 설계 및 API 자격증명: RESTful API 설계 및 API 자격증명(Credentials).md
   - 보안:
       - 랜덤 시크릿(토큰) 및 인코딩: 랜덤 시크릿(토큰) 및 인코딩.md
+      - "인증(Authentication), 인가(Authorization), OAuth 2.0, OIDC": "인증(Authentication), 인가(Authorization), OAuth 2.0, OIDC.md"
   - 데이터베이스:
       - UUID (Universally Unique Identifier) 가이드: UUID (Universally Unique Identifier) 가이드.md
 
