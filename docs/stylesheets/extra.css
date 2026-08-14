@@ -1,5 +1,17 @@
-/* 브랜드 퍼플 팔레트 */
+/* ============================================
+   mingxi 문서 사이트 스타일
+   — 에디토리얼 노트 스타일 (퍼플 팔레트)
+   주의: mkdocs.yml palette의 primary/accent가
+   custom이어야 이 변수들이 적용됨
+   ============================================ */
+
+/* 한글 본문 폰트 */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css");
+
 :root {
+  --md-text-font: "Pretendard Variable";
+
+  /* 브랜드 퍼플 */
   --md-primary-fg-color: #5b3fd4;
   --md-primary-fg-color--light: #7a63e0;
   --md-primary-fg-color--dark: #4b34ad;
@@ -7,8 +19,136 @@
   --md-typeset-a-color: #5b3fd4;
 }
 
-/* 다크 모드(slate)에서는 밝은 톤으로 */
+/* ── 라이트: 퍼플 기가 도는 종이 톤 ── */
+[data-md-color-scheme="default"] {
+  --paper: #faf9fc;
+  --surface: #ffffff;
+  --ink: #17141f;
+  --ink-2: #555062;
+  --ink-3: #8d8899;
+  --line: #e7e4ef;
+  --line-strong: #d3cee1;
+  --accent-soft: #efebfa;
+
+  --md-default-bg-color: var(--paper);
+  --md-typeset-color: var(--ink);
+  --md-code-bg-color: #f1eff7;
+}
+
+/* ── 다크: 퍼플 기가 도는 잉크 톤 ── */
 [data-md-color-scheme="slate"] {
+  --paper: #16131e;
+  --surface: #1e1a29;
+  --ink: #e9e6f1;
+  --ink-2: #aaa4bb;
+  --ink-3: #7d7791;
+  --line: #2c2739;
+  --line-strong: #3e3852;
+  --accent-soft: #262038;
+
+  --md-default-bg-color: var(--paper);
+  --md-default-bg-color--light: var(--paper);
+  --md-typeset-color: var(--ink);
+  --md-code-bg-color: #241f33;
   --md-typeset-a-color: #a795f0;
   --md-accent-fg-color: #a795f0;
+}
+
+/* ── 타이포그래피 ── */
+.md-typeset {
+  line-height: 1.75;
+}
+.md-typeset h1 {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--md-typeset-color);
+  text-wrap: balance;
+}
+.md-typeset h2 {
+  font-weight: 750;
+  letter-spacing: -0.015em;
+  color: var(--md-typeset-color);
+  margin-top: 2.2em;
+  text-wrap: balance;
+}
+.md-typeset h3,
+.md-typeset h4 {
+  font-weight: 700;
+  color: var(--md-typeset-color);
+}
+
+/* 섹션 구분 수평선 */
+.md-typeset hr {
+  border-bottom: 1px solid var(--line);
+  margin: 2.6em 0;
+}
+
+/* ── 인용구 (> **핵심:** ...) → 강조 박스 ── */
+.md-typeset blockquote {
+  background: var(--accent-soft);
+  border-left: 3px solid var(--md-primary-fg-color);
+  border-radius: 0 8px 8px 0;
+  padding: 0.9em 1.3em;
+  color: var(--md-typeset-color);
+  margin: 1.6em 0;
+}
+[data-md-color-scheme="slate"] .md-typeset blockquote {
+  border-left-color: #a795f0;
+}
+.md-typeset blockquote p {
+  margin-top: 0.4em;
+  margin-bottom: 0.4em;
+}
+
+/* ── 표: 카드형 컨테이너 ── */
+.md-typeset table:not([class]) {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface);
+  box-shadow: none;
+  font-size: 0.72rem;
+}
+.md-typeset table:not([class]) th {
+  background: var(--accent-soft);
+  color: var(--md-typeset-color);
+  font-weight: 700;
+  border-bottom: 1px solid var(--line-strong);
+  padding: 0.85em 1.1em;
+  min-width: unset;
+}
+.md-typeset table:not([class]) thead th:first-child {
+  border-top-left-radius: 10px;
+}
+.md-typeset table:not([class]) thead th:last-child {
+  border-top-right-radius: 10px;
+}
+.md-typeset table:not([class]) td {
+  border-top: 1px solid var(--line);
+  padding: 0.85em 1.1em;
+}
+.md-typeset table:not([class]) tbody tr:hover {
+  background: color-mix(in srgb, var(--accent-soft) 45%, transparent);
+  box-shadow: none;
+}
+
+/* ── 코드 ── */
+.md-typeset code {
+  border-radius: 4px;
+  padding: 0.12em 0.45em;
+}
+.md-typeset pre > code {
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  padding: 0.9em 1.1em;
+}
+
+/* ── 상단바: 종이 위에 떠 있는 느낌 ── */
+.md-header {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08);
+}
+
+/* ── 네비게이션 다듬기 ── */
+.md-nav__item .md-nav__link--active,
+.md-nav__item .md-nav__link--active code {
+  font-weight: 700;
 }
